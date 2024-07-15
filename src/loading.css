@@ -1,0 +1,51 @@
+.continer {
+  height: 50px;
+  width: 50px;
+  animation: circle 1s linear;
+  animation-iteration-count: infinite;
+
+  border: 4px solid #3d5220;
+  border-right-color: white;
+  border-radius: 50%;
+  position: relative;
+}
+
+.continer::before {
+  content: "";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 4px solid #2a3759;
+  border-bottom-color: white;
+  border-radius: 50%;
+}
+
+.continer::after {
+  content: "";
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border: 4px solid #431d32;
+  border-top-color: white;
+  border-radius: 50%;
+}
+
+.continer:hover {
+  animation-play-state: paused;
+}
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
